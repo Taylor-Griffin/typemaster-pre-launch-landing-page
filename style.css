@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;900&display=swap');
+
+/* ---CSS Reset--- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.5;
+    /* height: 100vh; */
+    display: grid;
+    margin: 0;
+    place-items: center center;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input,
+textarea,
+select,
+button {
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    border: 1px solid gray;
+}
+
+button, label, input, select, progress, meter {
+    display: block;
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    height: 30px;
+  }
+
+embed,
+iframe,
+img,
+object,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+[hidden] {
+    display: none !important;
+}
+/* ---Base Styles--- */
+:root{
+   --primary:#F16718;
+   --secondary: #FF9B62;
+   --black: #162542;
+   --grey: #E8EFF2;
+   --darkgrey:#7B8BAD;
+
+   font-size: 62.75%;
+
+}
+
+body{
+    font-family: 'Barlow', sans-serif;
+}
+
+h1,h2,h3{
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 2rem;
+}
+
+h1{
+    font-size: 5.6rem;
+    line-height: 1;
+}
+
+h2{
+    font-size: 3.2rem;
+}
+
+h3{
+    font-size: 2.4rem;
+}
+
+p{
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    color:var(--darkgrey);
+}
+
+.hero span{
+   color: var(--darkgrey);
+   text-transform: uppercase;
+   font-size: 1.6rem;
+   margin-left: 2rem;
+}
+
+img{
+    border-radius: 10px;
+}
+
+.logo{
+    border-radius: 0;
+}
+
+button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 45%;
+    border-color: transparent;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 1px 4px hsla(220, 90%, 37%, 0.25);
+
+}
+
+header button{
+    background-color: var(--grey);
+    margin-right: 2rem;
+    transition: all 0.3s ease;
+}
+header button:hover{
+    background-color: var(--black);
+    color: var(--grey);
+}
+
+
+main button{
+    background-color: var(--primary);
+    color: #fff;
+    transition: all 0.3s ease;
+
+}
+
+main button:hover{
+    background-color: var(--secondary);
+    color: var(--grey);
+}
+
+header{
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    margin: 20px;
+    padding:0 20px;
+}
+
+.image--container{
+    display:grid;
+    position: relative;
+    grid-template-columns: 35% 65%;
+    grid-auto-rows: 1fr;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    gap:2rem;
+}
+
+
+
+
+
+
+.orange--pic{
+    background: var(--primary);
+    margin-left: -10px;
+    width: 12.9rem;
+    border-radius: 10px;
+}
+
+.orange--pic img{
+    grid-column: 1/2;
+    opacity: 0.3;
+
+}
+
+.intro--text{
+    margin-bottom: 8rem;
+}
+ .card--icon-1{
+     display:flex;
+     align-items: center;
+     justify-content: center;
+    width: 6.5rem;
+    height: 6.5rem;
+    margin: 0 auto 4rem auto;
+    border-radius: 5px;
+    background-image:linear-gradient( var(--primary), var(--primary));
+}
+
+.card--icon-1::before{
+    content:url("./img/shared/icon-compatible.svg");
+
+
+}
+ .card--icon-2{
+    display:flex;
+     align-items: center;
+     justify-content: center;
+    width: 6.5rem;
+    height: 6.5rem;
+    margin: 0 auto 4rem auto;
+    border-radius: 5px;
+    background-image:linear-gradient( var(--primary), var(--primary));
+}
+
+.card--icon-2::after{
+    content:url("./img/shared/icon-bluetooth.svg");
+
+}
+ .card--icon-3{
+    display:flex;
+     align-items: center;
+     justify-content: center;
+    width: 6.5rem;
+    height: 6.5rem;
+    margin: 0 auto 4rem auto;
+    border-radius: 5px;
+    background-image:linear-gradient( var(--primary), var(--primary));
+}
+
+.card--icon-3::after{
+    content:url("./img/shared/icon-battery.svg");
+
+}
+ .card--icon-4{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 6.5rem;
+    height: 6.5rem;
+    margin: 0 auto 4rem auto;
+    border-radius: 5px;
+    background-image:linear-gradient( var(--primary), var(--primary));
+}
+
+.card--icon-4::after{
+    content:url("./img/shared/icon-light.svg");
+
+}
+
+.card--text{
+    margin-bottom: 4rem;
+}
+
+footer {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+footer span{
+    text-transform: none;
+
+}
+
+.footer--span1{
+    color: var(--darkgrey);
+    font-weight: 900;
+}
+
+
+
+
+
+
+
+/* ---Mobile Layout--- */
+@media (max-width: 400px){
+
+    :root{
+        font-size: 57%;
+    }
+    button{
+        min-width: 10rem;
+        font-size: 1.2rem;
+    }
+     .hero{
+         display: flex;
+         flex-direction: column;
+        margin-left: 2rem;
+        margin-top: 2rem;
+        width: 100vw;
+    }
+    .hero--text{
+        width: 92%;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero img{
+        width: 100%;
+    }
+
+    .image--container img{
+        height: 19.3rem;
+    }
+
+    .product--intro{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 80%;
+        margin: 4rem auto;
+    }
+
+    .product--intro h2{
+        font-size: 3.5rem;
+    }
+
+    .card{
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+
+    }
+
+}
+
+/* ---Tablet Layout--- */
+
+@media (min-width:600px){
+
+    :root{
+        font-size: 57%;
+    }
+    .hero button{
+        width: 50%;
+        max-width: 18rem;
+    }
+    .hero{
+        display:flex;
+        margin: 2rem;
+    }
+
+    .hero img{
+       width: 100%;
+       margin-left: 2rem;
+       overflow: hidden;
+    }
+
+    .hero--text{
+        margin-top: 4rem;
+
+    }
+
+
+
+    .hero--span{
+        display:flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero--span button{
+        width: 50%;
+    }
+
+    .hero--span span{
+        margin-left: 3rem;
+    }
+
+    .image--container{
+       gap: 4rem;
+       grid-template-columns: 33.5% 57%;
+    }
+
+    .orange--pic{
+        width: 100%;
+        margin-left: 2rem;
+    }
+
+    .product--intro{
+        display:flex;
+        margin-left: 2rem;
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h2{
+        line-height: 1.2;
+        width: 60%;
+    }
+    .intro--text{
+        margin-bottom: 0;
+        margin-right: 2rem;
+        /* padding: 2rem; */
+        width: 100%;
+    }
+
+    .card-container{
+        display:flex;
+        flex-wrap: wrap;
+    }
+
+    .card{
+        display:flex;
+        flex-direction: column;
+        width:48%;
+        padding: 2rem;
+    }
+    .card--icon-1, .card--icon-2, .card--icon-3, .card--icon-4{
+        margin:0 0 2rem 0;
+    }
+}
+
+/* ---Desktop Layout--- */
+
+@media (min-width: 900px){
+
+    .wrapper{
+        padding: 5rem 30rem;
+    }
+    button{
+        max-width:17rem;
+    }
+    .card-container{
+        flex-wrap: nowrap;
+        padding: 5rem 10rem;
+    }
+    .card--icon-1, .card--icon-2, .card--icon-3, .card--icon-4{
+        margin:0 0 4rem 0;
+    }
+    .card{
+        width: 35rem;
+    }
+    .middle--section{
+        display:flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .middle--section::after{
+        content:"";
+        width: 20rem;
+        height: 25rem;
+        background-color: var(--grey);
+        position: absolute;
+        left: -34rem;
+        bottom: 2rem;
+        border-radius: 10px;
+    }
+    .product--intro{
+        flex-direction: column;
+        width:20%;
+        margin-right: 5rem;
+    }
+    .product--intro h2{
+        width: 100%;
+    }
+    .hero{
+        position: relative;
+    }
+
+    .hero::after{
+        content:"";
+        width: 20rem;
+        height: 25rem;
+        background-color: var(--grey);
+        position: absolute;
+        right: -37rem;
+        border-radius: 10px;
+    }
+}
+
+
+
+
